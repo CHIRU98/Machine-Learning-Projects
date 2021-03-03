@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>  
+    <link href="../css/style.css" rel="stylesheet">      
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        
+          <div class="heading">
+            <h1>Stroke Prediction</h1>
+
+          </div>
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <div class="layout">
+                    
+            <div>
+            
+                <label for="Gender">Gender:</label><br/>
+                <input type="radio" name="gender" value="1" /> : Male<br />
+                <input type="radio" name="gender" value="0"/> : Female<br/>
+                
+    
+            
+                <label for="heart_disease">heart_disease : </label><br/>
+                <input type="radio" name="heart_disease" value="1"> : Yes <br/> 
+                <input type="radio" name="heart_disease" value="0"> : No <br/> 
+    
+    
+                <label for="ever_married">Marital : </label><br/>
+                <input type="radio" name="ever_married" value="1"> : Yes <br/> 
+                <input type="radio" name="ever_married" value="0"> : No <br/> 
+    
+    
+                <label for="work_type">Work_type : </label><br/>
+                <input type="radio" name="work_type"  value="0"> : Private<br/>
+                <input type="radio" name="work_type" value="1"> : Self-employed<br/>
+                <input type="radio" name="work_type" value="2"> : Govt-job<br/>
+                <input type="radio" name="work_type" value="3"> : children<br/>
+                <input type="radio" name="work_type" value="4"> : Never_worked<br/>
+
+                
+                <label for="Residence_type">Residency: </label><br/>
+                <input type="radio" name="Residence_type" value="1"> : Urban <br/> 
+                <input type="radio" name="Residence_type" value="0"> : Rural <br/> 
+    
+    
+                <label for="smoking_status">smoking_status : </label><br/>
+                <input type="radio" name="smoking_status" value="1"> : Formely-smoked<br/>
+                <input type="radio" name="smoking_status" value="0"> : Never-smoked<br/>
+                <input type="radio" name="smoking_status" value="3"> : Smokes<br/>
+                <input type="radio" name="smoking_status" value="2"> : Unknown<br/>
+                
+                </div>
+    
+                <div class="text_data">
+                
+                <label for="Hypertension">Hypertension : </label>
+                <input type="number" name="Hypertension" placeholder="Hypertension" required="required" /><br/>
+            
+                <label for="avg_glucose_level">Glucose Level : </label>
+                <input type="number" name="avg_glucose_level" placeholder="avg_glucose_level" required="required" /><br/>
+    
+                <label for="bmi">BMI: </label>
+                <input type="number" name="bmi" placeholder="BMI" required="required" /><br/>
+    
+                <label for="age">Age : </label>
+                <input type="number" name="Age" placeholder="Age" required="required" /><br/>
+    
+                </div>
+    
+            </div>
+
+            <div class="submit">
+                <button type ="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </div> 
+        </form>
+    
+       <br>
+       <br>
+       
+    
+     </div>
+    
+    
+</body>
+</html>
